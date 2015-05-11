@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorAccent">@color/primaryDark</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+
+    </style>
+
+    <!-- custome app bar theme style -->
+    <style name="MycustomeTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">#fff</item><!-- custome actionbar text color-->
+        <item name="android:textColorSecondary">#f00</item><!-- custome menu color right side-->
+    </style>
+
+</resources>
