@@ -27,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
         NavigationDrawbarFragment drawbarFragment=(NavigationDrawbarFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawbar);
 
-        drawbarFragment.setUp((DrawerLayout)findViewById(R.id.draw_layout),toolbar);
+        drawbarFragment.setUp(R.id.fragment_navigation_drawbar,(DrawerLayout)findViewById(R.id.draw_layout),toolbar);
 
     }
 
