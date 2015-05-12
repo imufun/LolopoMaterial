@@ -80,6 +80,12 @@ public class NavigationDrawbarFragment extends android.support.v4.app.Fragment {
         }
 
         mDrawerLayout.setDrawerListener(mdrawerToggle);
+        mDrawerLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                mdrawerToggle.syncState();
+            }
+        });
 
     }
 
