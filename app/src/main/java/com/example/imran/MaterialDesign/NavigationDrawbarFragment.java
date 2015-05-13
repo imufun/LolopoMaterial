@@ -42,6 +42,7 @@ public class NavigationDrawbarFragment extends android.support.v4.app.Fragment {
         if (savedInstanceState != null) {
             mFormSaveInstanceState = true;
         }
+
     }
 
     @Override
@@ -52,7 +53,7 @@ public class NavigationDrawbarFragment extends android.support.v4.app.Fragment {
     }
 
 
-    public void setUp(int fragmentId,DrawerLayout drawerLayout, Toolbar toolbar) {
+    public void setUp(int fragmentId,DrawerLayout drawerLayout, final Toolbar toolbar) {
 
         ContainerView=getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
@@ -73,6 +74,14 @@ public class NavigationDrawbarFragment extends android.support.v4.app.Fragment {
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
                 getActivity().invalidateOptionsMenu();
+            }
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                super.onDrawerSlide(drawerView, slideOffset);
+                //Log.d("IMU","offset"+slideOffset);
+                if (slideOffset<0.6)
+                    toolbar.setAlpha(1-slideOffset);
+
             }
         };
         if (!mUserlearnerDrawer && !mFormSaveInstanceState) {

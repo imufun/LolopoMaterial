@@ -22,13 +22,6 @@
             android:text="@string/hello_world"/>
     </RelativeLayout>
 
-    <!--<fragment-->
-        <!--android:id="@+id/fragment_navigation_drawbar"-->
-        <!--android:layout_width="@dimen/nav_drawer_width"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--app:layout="@layout/fragment_navigation_drawbar"-->
-       <!--tools:layout="@layout/fragment_navigation_drawbar"/>-->
     <fragment
         android:id="@+id/fragment_navigation_drawbar"
         android:layout_width="@dimen/nav_drawer_width"
