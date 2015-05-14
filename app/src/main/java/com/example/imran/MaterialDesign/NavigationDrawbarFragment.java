@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import com.example.imran.lolopomaterial.R;
 
 
 public class NavigationDrawbarFragment extends android.support.v4.app.Fragment {
+
+    private RecyclerView recyclerView;
 
     public static final String FERE_FILE_NAME = "testpref";
     public static final String KEY_USER_LEARED_DRAWER = "usser_lear_drawer";
@@ -49,7 +52,10 @@ public class NavigationDrawbarFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_navigation_drawbar, container, false);
+        View layout=inflater.inflate(R.layout.fragment_navigation_drawbar, container, false);
+
+        recyclerView=(RecyclerView)layout.findViewById(R.id.drawList);
+        return layout;
     }
 
 
