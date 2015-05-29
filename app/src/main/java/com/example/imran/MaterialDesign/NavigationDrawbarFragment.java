@@ -76,12 +76,12 @@ public class NavigationDrawbarFragment extends Fragment {
 
         List<Information> data = new ArrayList<>();
         int[] icons = {R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher};// array nilam karon shob icon and tile show korar jonne
-        String[] titles = {"HTML", "CSS", "JAVA", "Android"};
+        String[] titles = {"1-HTML", "2-CSS", "3-JAVA", "4-Android"};
 
-        for (int i = 0; i < titles.length && i < icons.length; i++) {
+        for (int i = 0; i <100; i++) {
             Information current = new Information();// object create korla ,shob value ke assagin korar jonne
-            current.iconId = icons[i]; // icons
-            current.title = titles[i]; // title
+            current.iconId = icons[i%icons.length]; // icons
+            current.title = titles[i%titles.length]; // title
             data.add(current);  // shob value ke add korlam
         }
         return data; // data return korlam ,List<Information> er maddhome
