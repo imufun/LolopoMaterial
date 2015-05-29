@@ -4,7 +4,7 @@ package com.example.imran.MaterialDesign;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class NavigationDrawbarFragment extends android.support.v4.app.Fragment {
+public class NavigationDrawbarFragment extends Fragment {
 
     private RecyclerView recyclerView;
 

@@ -10,10 +10,9 @@ import android.widget.TextView;
 
 import com.example.imran.lolopomaterial.R;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.zip.Inflater;
+
 
 /**
  * Created by imran on 5/15/15.
@@ -51,7 +50,8 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
     //- shob itam call hobe ei method er maddhome --getItemCount (android.support.v7.widget);
     @Override
     public int getItemCount() {
-        return 0;
+//        return 1;
+        return data.size();
     }
 
 
@@ -70,7 +70,6 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
             icon=(ImageView)itemView.findViewById(R.id.ImgIcon);
         }
     }
-
 
 
 }
