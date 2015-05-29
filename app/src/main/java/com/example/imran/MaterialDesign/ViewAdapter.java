@@ -88,7 +88,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
         public void onClick(View v) {
              deleted(getAdapterPosition());// remove here
 
-        }
+        } //test
     }
 
 
