@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.imran.MaterialDesign.views.Mylayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -14,4 +15,19 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_world"/>
 
-</RelativeLayout>
+    <com.example.imran.MaterialDesign.views.MyView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:text="My View"
+        android:textColor="@android:color/black">
+
+
+    </com.example.imran.MaterialDesign.views.MyView>
+
+
+
+
+</com.example.imran.MaterialDesign.views.Mylayout>

@@ -1,6 +1,7 @@
 package com.example.imran.MaterialDesign;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,24 +26,28 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
     public Context context;
 
     private LayoutInflater inflater;
-    List<Information>data= Collections.emptyList(); //
+    List<Information> data = Collections.emptyList(); //
 
-    public ViewAdapter(Context context,List<Information>data) {
-        inflater=LayoutInflater.from(context);
+    public ViewAdapter(Context context, List<Information> data) {
+        inflater = LayoutInflater.from(context);
 
-        this.data=data;
+        this.data = data;
     }
 
     // Remoview item form recycler
-    public void deleted(int position){
+    public void deleted(int position) {
         notifyItemRemoved(position);
+    }
+
+    public void insert(int position) {
+        // notifyItemInserted(position);
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view=inflater.inflate(R.layout.coustome_row, parent, false);// ekhane custome spec call kortrese
-        Log.d("IMRAN","onCreateViewHolder called");
-        MyViewHolder holder=new MyViewHolder(view);//
+        View view = inflater.inflate(R.layout.coustome_row, parent, false);// ekhane custome spec call kortrese
+        Log.d("IMRAN", "onCreateViewHolder called");
+        MyViewHolder holder = new MyViewHolder(view);//
         return holder;
 
     }
@@ -50,7 +55,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        Information current=data.get(position);//call Information class
+        Information current = data.get(position);//call Information class
 
         Log.d("IMRAN", "onBindViewHolder called" + position);
         //Log.d("IMRAN","onBindViewHolder called"+position);
@@ -67,9 +72,8 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
     }
 
 
-
     //Custome_row call hoise ekhane
-    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // textview and icon call here
 
         TextView title;
@@ -79,16 +83,22 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            title=(TextView)itemView.findViewById(R.id.TextTile);
-            icon=(ImageView)itemView.findViewById(R.id.ImgIcon);
+            itemView.setOnClickListener(this);
+
+            title = (TextView) itemView.findViewById(R.id.TextTile);
+            icon = (ImageView) itemView.findViewById(R.id.ImgIcon);
             icon.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-             deleted(getAdapterPosition());// remove here
+          //  deleted(getAdapterPosition());// remove here
+            // insert(getAdapterPosition());
 
-        } //test
+        context.startActivity(new Intent(context,SubActivity.class));
+
+
+        }
     }
 
 
