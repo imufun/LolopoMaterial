@@ -1,35 +1,43 @@
 <android.support.v4.widget.DrawerLayout
-    android:id="@+id/draw_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draw_layout"
     android:layout_width="match_parent"
 
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
         <include
             android:id="@+id/app_bar"
-            layout="@layout/app_bar"/>
+            layout="@layout/app_bar" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/app_bar"
-            android:text="@string/hello_world"/>
-    </RelativeLayout>
+
+        <com.example.imran.MaterialDesign.Tab.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <fragment
         android:id="@+id/fragment_navigation_drawbar"
+        android:name="com.example.imran.MaterialDesign.NavigationDrawbarFragment"
         android:layout_width="@dimen/nav_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:layout="@layout/fragment_navigation_drawbar"
-        android:name="com.example.imran.MaterialDesign.NavigationDrawbarFragment"
-        tools:layout="@layout/fragment_navigation_drawbar"/>
+        tools:layout="@layout/fragment_navigation_drawbar" />
 
 </android.support.v4.widget.DrawerLayout>

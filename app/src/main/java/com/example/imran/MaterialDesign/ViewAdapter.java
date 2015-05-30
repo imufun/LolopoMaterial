@@ -24,9 +24,8 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
 
     private static final String TAG = "IMRAN";
     public Context context;
-
-    private LayoutInflater inflater;
     List<Information> data = Collections.emptyList(); //
+    private LayoutInflater inflater;
 
     public ViewAdapter(Context context, List<Information> data) {
         inflater = LayoutInflater.from(context);
@@ -95,7 +94,8 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.MyViewHolder> 
           //  deleted(getAdapterPosition());// remove here
             // insert(getAdapterPosition());
 
-        context.startActivity(new Intent(context,SubActivity.class));
+            //context.startActivity(new Intent(context,SubActivity.class));
+
 
 
         }

@@ -10,4 +10,11 @@
     <string name="draw_open">Open</string>
     <string name="draw_close">Close</string>
 
+    <string-array name="tab">
+
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>
